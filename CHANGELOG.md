@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Fixed
+
+- **Tests** -- `tests/test_api_token_auth.py` imported `vast_admin_mcp.setup` as `setup_module`, which pytest treats as the module-level setup hook and calls, so all its tests errored under pytest. Renamed the alias to `vast_setup`.
+
 ## [0.2.7] - 2026-11-02
 
 ### Fixed
